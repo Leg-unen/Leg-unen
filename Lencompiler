@@ -1,0 +1,121 @@
+import java.util.Scanner;
+import java.lang.Math;
+
+
+ class Dcoder
+ {
+   
+   
+   public static String compiler;
+   
+   public static void compile(){
+     int number = (int)(Math.random() * 10);
+     if(number==1){
+       compiler="@";
+     }else if(number==2){
+       compiler="¤";
+     }else if(number==3){
+       compiler="*";
+     }else if(number==4){
+       compiler="~";
+     }else{
+       compiler="_";
+     }
+       
+     }
+     
+     
+    public static void main(String[] args) {
+     
+     System.out.println("Warning : len compiler isn't supporting special characters \nlike & ¤ ☆ @ ect... \n \n");
+     System.out.print("Use len decompiler to decrypt the given word \n \n");
+                                                                                                                        
+     
+    String word;
+    
+    Scanner scan2 = new Scanner(System.in);
+    System.out.print("Enter word to compile : ");
+    word = scan2.nextLine();
+   
+    System.out.println("Loading...");
+    
+    try        
+{
+    Thread.sleep(1000);
+} 
+catch(InterruptedException ex) 
+{
+    Thread.currentThread().interrupt();
+}
+    
+    char[] e = word.toCharArray();
+    
+    int length = e.length;
+    
+    
+    System.out.print("Compiled word is: \n");
+     for(int i = 0; i < length; i++){
+       
+       if(e[i]=='h'){
+       e[i] = '-';
+       }
+      if(e[i]=='a'){
+        e[i] = '^';
+      }
+      if(e[i]=='e'){
+        e[i] = '☆';
+      }
+      if(e[i]=='o'){
+        e[i] = '$';
+      }
+      if(e[i]=='l'){
+        e[i] = '#';
+      }
+      if(e[i]=='n'){
+        e[i] = '&';
+      }
+      if(e[i]=='x'){
+        e[i] = '¿';
+      }
+      if(e[i]=='c'){
+        e[i] = '?';
+      }
+      if(e[i]=='u'){
+        e[i] = '%';
+      }
+      if(e[i]=='i'){
+        e[i] = '÷';
+      }
+      if(e[i]=='g'){
+        e[i] = '◇';
+      }
+      if(e[i]=='r'){
+        e[i] = '□';
+      }
+      if(e[i]=='/'){
+        e[i] = 'µ';
+      }
+      if(e[i]==' '){
+        e[i] = '¡';
+      }
+      
+       compile();
+       System.out.print(compiler);
+       System.out.print(e[i]);
+       try        
+       {
+    Thread.sleep(100);
+       } 
+    catch(InterruptedException ex) 
+       {
+    Thread.currentThread().interrupt();
+       }
+       
+     }
+     
+     
+    
+     }
+ }
+ 
+ //By cybercahn 👨‍💻
